@@ -13,7 +13,7 @@
   <section class="text-gray-600 body-font">
         <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
           <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Apramey Bhat
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Apramey Bhat ⚡
               <br class="hidden lg:inline-block">
             </h1>
             <h3 class="mb-8 leading-relaxed">Hi there!<br>
@@ -44,19 +44,15 @@
       <section class="text-gray-600 body-font">
           
         <div class=" container px-5 py-24 mx-auto">
-          <div class="flex flex-wrap w-full mb-6">
-            <div class="lg:w-1/2 w-full mb-2 lg:mb-0">
-              <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Present:</h1>
-              <div class="h-1 w-20 bg-blue-500 rounded"></div>
+         
+          <CardHeader :items="expHeader"/>
+
+          <div class="flex flex-wrap -m-4">
+            <div v-for="ex in experience" v-bind:key="ex.id" class="xl:w-1/4 md:w-1/2 p-4">
+               <Card :obj="ex"/>
             </div>
-            <div class="lg:w-1/2 w-full mb-6 pl-6 lg:mb-0">
-              <h1 class="sm:text-3xl text-2xl font-medium  title-font mb-2 text-gray-900">Past:</h1>
-              <div class="h-1 w-20 bg-blue-500 rounded"></div>
-            </div>
-          </div>
-          
-          <Card :obj="experience"/>
-          </div>
+          </div> 
+        </div>
        
       </section>
 </template>
@@ -64,6 +60,7 @@
 <script>
 // @ is an alias to /src
 import Card from "@/components/Card.vue"
+import CardHeader from "@/components/CardHeader.vue"
 
 export default {
   name: 'Home',
@@ -71,34 +68,46 @@ export default {
     return{
       experience : [
         {
+          id : 1,
           title : "SOFTWARE ENGINEER",
           subtitle : "First American Title Corporation",
-          description : "Part of team <b>TRecS</b>, contributing for Project Plymouth",
+          date : "Dec 2020 - Present",
+          description : "Part of team <b>TRecS</b> 🐱‍🐉, contributing for Project Plymouth",
           imgsrc : ""
         },
         {
+          id : 2,
           title : "TRYING &",
           subtitle : "Learning new things",
+          date : "Forever learning",
           description : "I love to explore new stuffs. Investment in knowledge gives best interest! 🖖",
           imgsrc : ""
         },
         {
+          id : 3,
           title : "PRODUCT ENGINEER",
           subtitle : "Inszoom",
-          description : "An immigration case management software. Full stack web development in myriad projects",
-          imgsrc : ""
+          date : "Jul 2018 - Dec 2020",
+          description : "An immigration case management software ✈",
+          pointers : ["Awarded with Zoom Star🥇","Member of Core tech team👨‍💻","Worked, Designed and Delivered in core modules of INSZoom product like Case & KB, Forms, Questionnaires🚀","Actively participated in articulating coding standards and code review document📃","Conducted project training and knowledge sessions for new hires👶"],
+          imgsrc : "",
+          isPing : true
         },
         {
+          id : 4,
           title : "ANDROID DEVELOPMENT INTERN",
-          subtitle : "Boredbees tech solutions India",
-          description : "Built 2 (GRE Made easy, Code baba) android applications in span of 1 week.",
+          subtitle : "Boredbees tech solutions",
+          date : "Jan 2016",
+          description : "Built 2 (GRE Made easy, Code baba) android applications 👾 in span of 1 week.",
           imgsrc : ""
         }
-      ]
+      ],
+      expHeader : ["Present:","Past:"]
     }
   },
   components: {
     Card,
+    CardHeader
   },
 };
 </script>

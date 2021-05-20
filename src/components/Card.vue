@@ -1,16 +1,22 @@
 <template>
-    <div class="flex flex-wrap -m-4">
-    <div v-for="ex in obj" v-bind:key="ex.id" class="xl:w-1/4 md:w-1/2 p-4">
-        <div  class="bg-gray-100  p-6 rounded-lg">
-        <img class="h-40 pr-6 rounded w-full object-cover object-center" v-bind:src="ex.imgsrc" alt="content">
-        <div class="">
-            <h3 class="tracking-widest text-blue-500 text-xs font-medium title-font">{{ex.title}}</h3>
-            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">{{ex.subtitle}}</h2>
-            <p class="leading-relaxed text-base">{{ex.description}}</p>
-        </div>                
+    
+        <div @mouseover="active = false" @mouseleave="active = true" v-bind:class="active ? 'bg-gray-100' : 'bg-gradient-to-r from-green-200 to-blue-200'" class="p-6 rounded-lg">
+                
+            <div v-if="active || !obj.pointers">
+                <img class="h-40 pr-6 rounded w-full object-cover object-center" v-bind:src="obj.imgsrc" alt="content">
+                <h3 class="tracking-widest text-blue-500 text-xs font-medium title-font">{{obj.title}}</h3>
+                <h2 class="text-lg text-gray-900 font-medium title-font">{{obj.subtitle}}</h2>
+                <h5 class="text-xs text-blue-500 mb-4">{{obj.date}}</h5>
+                <p class="leading-relaxed text-base" v-html="obj.description"></p>
+            </div>
+            <div v-else-if="obj.pointers && obj.pointers.length > 0">
+                <ul class="list-inside list-disc">
+                    <li v-for="point in obj.pointers" v-bind:key="point.id" v-html="point">
+                </li>
+                </ul>
+            </div>
         </div>
-    </div>           
-    </div>
+
 </template>
 
 <script>
@@ -19,9 +25,17 @@ export default {
   props: {
     obj: Object,
   },
+  data() {
+      return {
+          active : true,
+          classActive : true
+      }
+  },
+  methods:{
+      
+  }
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 </style>
