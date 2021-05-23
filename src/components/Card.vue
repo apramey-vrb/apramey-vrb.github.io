@@ -1,6 +1,5 @@
 <template>
-    
-        <div @mouseover="active = false" @mouseleave="active = true" v-bind:class="active ? 'bg-gray-100' : 'bg-gradient-to-r from-green-200 to-blue-200'" class="p-6 rounded-lg">
+        <div @mouseover="active = false" @mouseleave="active = true" v-bind:class="active ? 'bg-gray-100' : 'bg-gradient-to-r from-green-300 to-blue-300'" class="p-6 rounded-lg">
                 
             <div v-if="active || !obj.pointers">
                 <img class="h-40 pr-6 rounded w-full object-cover object-center" v-bind:src="obj.imgsrc" alt="content">
@@ -24,6 +23,7 @@ export default {
   name: 'Card',
   props: {
     obj: Object,
+    title: String
   },
   data() {
       return {

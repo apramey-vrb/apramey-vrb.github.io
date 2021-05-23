@@ -1,18 +1,28 @@
 <template>
-<div class="flex flex-wrap w-full mb-6"> 
-    <div v-for="item in items" v-bind:key="item.id" class="lg:w-1/2 w-full mb-2 pl-6 lg:mb-0">
-        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">{{item}}</h1>
-        <div class="h-1 w-20 bg-blue-500 rounded"></div>
+  <div :class="classNames.grid">
+    <div :class="classNames.headerGridSize">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">{{header}}</h1>
+        <div class="h-1 w-20 bg-blue-500 rounded mb-6"></div>
+      </div>
+    <div v-for="ex in cards" v-bind:key="ex.id" :class="classNames.card">
+        <Card :obj="ex"/>
     </div>
-</div>
+    </div>
 </template>
 
 <script>
+import Card from "@/components/Card.vue"
+
 export default {
   name: 'CardHeader',
   props: {
-    items: Array,
+    cards: Array,
+    header : String,
+    classNames : Object
   },
+  components:{
+    Card
+  }
 };
 </script>
 
