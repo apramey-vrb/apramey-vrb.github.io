@@ -21,13 +21,13 @@
               Currently Software Engineer at First American<br>
               I love Technology, Photography, Travel and Philosophy </h3>
               <div class="flex mb-4">
-                <div class="w-1/3  h-12 "><button class="bg-gray-200 hover:bg-blue-300 text-gray-800 font-semibold py-2 px-4  rounded shadow" onclick="window.location.href='https://twitter.com/ChhajedViraj';" >
+                <div class="w-1/3  h-12 "><button class="bg-gray-200 hover:bg-blue-300 text-gray-800 font-semibold py-2 px-4  rounded shadow" onclick="window.location.href='';" >
                   Twitter
                 </button></div>
-                <div class="w-1/3  h-12 mx-3"><button class="bg-gray-200 hover:bg-blue-300 text-gray-800 font-semibold py-2 px-4  rounded shadow" onclick="window.location.href='https://www.linkedin.com/in/virajchhajed/';" >
+                <div class="w-1/3  h-12 mx-3"><button class="bg-gray-200 hover:bg-blue-300 text-gray-800 font-semibold py-2 px-4  rounded shadow" onclick="window.location.href='';" >
                   LinkedIn
                 </button></div>
-                <div class="w-1/3  h-12"><button class="bg-gray-200 hover:bg-yellow-500 text-gray-800 font-semibold py-2 px-4  rounded shadow" onclick="window.location.href='https://www.instagram.com/viraj.chhajed/';" >
+                <div class="w-1/3  h-12"><button class="bg-gray-200 hover:bg-yellow-500 text-gray-800 font-semibold py-2 px-4  rounded shadow" onclick="window.location.href='';" >
                   Instagram
                 </button></div>
               </div>
