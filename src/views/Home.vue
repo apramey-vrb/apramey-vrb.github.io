@@ -1,4 +1,5 @@
 <template>
+    <div class=" ">
       <header class="text-gray-600 body-font bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-gray-800">
             <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
               <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
@@ -11,15 +12,15 @@
 
 
       <section class="text-gray-600 body-font">
-        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-          <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <h1 class="title-font sm:text-5xl text-5xl mb-4 pt-4 pb-4 font-bold rainbow rainbow_text_animated">Apramey Bhat ⚡
+        <div class="container mx-auto flex pt-20 pb-5 xl:pb-10 md:flex-row flex-col items-center">
+          <div class="xl:pl-20 md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-5 md:mb-0 items-center text-center">
+            <h1 class="title-font text-3xl xl:text-5xl lg:text-4xl mb-4 pt-4 pb-4 font-bold md:text-3xl rainbow rainbow_text_animated">Apramey Bhat ⚡
               <br class="hidden lg:inline-block">
             </h1>
             <h3 class="mb-8 leading-relaxed font-semibold">Hi there!<br>
-              Yet another IT guy here!<br>
-              Currently Software Engineer at First American<br>
-              I love Technology, Photography, Travel and Philosophy </h3>
+              Yet another Software and Web Developer! <br>
+              Currently working as Software Engineer at First American<br>
+              I love Technology, Photography, Travel, Philosophy and scribbling sometimes!</h3>
               <div class="flex mb-4">
                 <div class="w-1/3  h-12 "><button class="bg-gray-200 hover:bg-blue-300 text-gray-800 font-semibold py-2 px-4  rounded shadow" onclick="window.location.href='';" >
                   Twitter
@@ -32,9 +33,12 @@
                 </button></div>
               </div>
           </div>
-          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+          <div @mouseover="active = false" @mouseleave="active = true" class="lg:max-w-lg lg:w-full md:w-1/2 mx-auto">
+            <img v-if="active" class="object-cover rounded self-center" src="@\assets\Images\AprameyBlue.png">
+            <img v-else-if="!active" class="object-cover rounded self-center" src="@\assets\Images\AprameyRed.png">
           </div>
         </div>
+
       </section>
 
 
@@ -79,6 +83,7 @@
           <CardHeader :cards="photography" :isHtml="true" :classNames="photographyClass" />
         </div> 
       </section>
+    </div>
 </template>
 
 <script>
@@ -272,7 +277,8 @@ export default {
         headerGridSize : "col-span-8 pl-2",
         card : "col-span-3 xl:col-span-1 lg:col-span-1 sm:col-span-3 md:col-span-3 p-2",
         cardHoverColor : 'bg-gradient-to-r from-green-200 to-blue-200'
-      }
+      },
+      active : true
     }
   },
   components: {
