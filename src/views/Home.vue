@@ -13,11 +13,11 @@
 
       <section class="text-gray-600 body-font">
         <div class="container mx-auto flex pt-20 pb-5 xl:pb-10 md:flex-row flex-col items-center">
-          <div class="xl:pl-20 md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-5 md:mb-0 items-center text-center">
+          <div class="xl:pl-20 md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-5 md:mb-0 p-4 items-center text-center">
             <h1 class="title-font text-3xl xl:text-5xl lg:text-4xl mb-4 pt-4 pb-4 font-bold md:text-3xl rainbow rainbow_text_animated">Apramey Bhat ⚡
               <br class="hidden lg:inline-block">
             </h1>
-            <h3 class="mb-8 leading-relaxed font-semibold">Hi there!<br>
+            <h3 class="mb-8 leading-relaxed font-semibold ">Hi there!<br>
               Yet another Software and Web Developer! <br>
               Currently working as Software Engineer at First American<br>
               I love Technology, Photography, Travel, Philosophy and scribbling sometimes!</h3>
@@ -33,9 +33,8 @@
                 </button></div>
               </div>
           </div>
-          <div @mouseover="active = false" @mouseleave="active = true" class="lg:max-w-lg lg:w-full md:w-1/2 mx-auto">
-            <img v-if="active" class="object-cover rounded self-center" src="@\assets\Images\AprameyBlue.png">
-            <img v-else-if="!active" class="object-cover rounded self-center" src="@\assets\Images\AprameyRed.png">
+          <div class="lg:max-w-lg lg:w-full rounded md:w-1/2 mx-auto bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500">
+            <img class="object-cover rounded self-center pl-10" src="@\assets\Images\apramey.png">
           </div>
         </div>
 
