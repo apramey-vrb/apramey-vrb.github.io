@@ -51,11 +51,7 @@ export default {
   },
   data() {
     return {
-      title: this.title,
-      date: this.date,
-      location: this.location,
-      description: this.description,
-      isWork: this.isWork
+      
     };
   },
   methods: {
