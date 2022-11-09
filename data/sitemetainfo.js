@@ -15,7 +15,7 @@ const siteMetaInfo = {
   siteLogo: "../assets/author.png",
   image: "../assets/author.png",
   socialBanner: "/static/images/twitter-card.png",
-  email: "hello[at]apra.me",
+  email: "hello@apra.me",
   github: "https://github.com/apramey-vrb",
   githubUser: "apramey-vrb",
   twitter: "https://twitter.com/apramey8",
