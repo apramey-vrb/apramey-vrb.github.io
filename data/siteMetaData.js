@@ -9,7 +9,7 @@ const siteMetadata = {
   description:
     "A tech enthusiast & self taught learner. Love to talk the way of tech.",
   language: "en-us",
-  theme: "dark", // system, dark or light
+  theme: "light", // system, dark or light
   siteUrl: "https://apra.me",
   siteRepo: "#",
   siteLogo: "../assets/author.jpeg",
